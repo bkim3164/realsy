@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: black;
+  background-color: grey;
   color: white;
   font-size: 50px;
   font-weight: bold;
@@ -12,9 +12,30 @@
 
 #logo {
   height: 200px;
+  border-radius: 5px black;
   width: 200px;
+}
+
+.firstpage-bottom-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 25px;
 }
 
 .firstpage-bottom-text {
   font-size: 25px;
+  margin-right: 10px;
+}
+
+.firstpage-bottom-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.firstpage-bottom-button:hover {
+  color: white;
+  background: black;
 }
