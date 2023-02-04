@@ -1,7 +1,7 @@
 import psycopg2
 from psycopg2 import Error
 
-db_url = 'postgresql://Realsy:JmUsz3HAW98i65TP389vPA@forest-grizzly-4869.6wr.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full'
+db_url = 'postgresql://Realsy:JmUsz3HAW98i65TP389vPA@forest-grizzly-4869.6wr.cockroachlabs.cloud:26257/forest-grizzly-4869.defaultdb?sslmode=verify-full'
 
 
 def create_table():
