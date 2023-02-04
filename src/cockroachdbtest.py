@@ -22,6 +22,6 @@ def create_table():
         print("Error: ", error)
 
 
-create_table
+create_table()
 
 
