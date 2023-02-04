@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <img id="logo" src={logo} alt="Realsy logo"></img>
-      <header> Welco
+      <header> Welcome to Realsy!</header>
       <div className="firstpage-bottom-container">
         <div className="firstpage-bottom-text"> Get Started </div>
         <button className="firstpage-bottom-button">
