@@ -146,10 +146,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Aaditya Borse - borsea@uci.edu
-Brian Kim - brianbk1@uci.edu
-Radhakrishna Vempati - vempatir@uci.edu
-Krish Patel - krishjp2@uci.edu
+* Aaditya Borse - borsea@uci.edu
+* Brian Kim - brianbk1@uci.edu
+* Radhakrishna Vempati - vempatir@uci.edu
+* Krish Patel - krishjp2@uci.edu
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
 
@@ -162,7 +162,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 * []() Thank you to Hack@UCI 2023 for the fun experience and for hosting the hackathon.
 * []() We are thankful to the following people for their gracious OpenSource modules/components:
-      * []() 3DJakob/react-tinder-card
+  * []() 3DJakob/react-tinder-card
 * []() We would also love to thank HackUCI's sponsors for their gracious support.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
