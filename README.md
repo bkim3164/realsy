@@ -2,10 +2,6 @@
 
 In the project directory, you can run:
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Issues][issues-shield]][issues-url]
-
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -165,8 +161,9 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 ## Acknowledgments
 
 * []() Thank you to Hack@UCI 2023 for the fun experience and for hosting the hackathon.
+* []() We are thankful to the following people for their gracious OpenSource modules/components:
+      * []() 3DJakob/react-tinder-card
 * []() We would also love to thank HackUCI's sponsors for their gracious support.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
