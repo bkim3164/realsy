@@ -33,7 +33,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="https://drive.google.com/file/d/uc?export=view&id=[1OMkac8XmVXeFGztktq-Wn9l4QGCrSNaY" alt="Logo" width="80" height="80">
+    <img src="https://drive.google.com/uc?export=view&id=1OMkac8XmVXeFGztktq-Wn9l4QGCrSNaY" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">project_title</h3>
