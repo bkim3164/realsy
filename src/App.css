@@ -1,4 +1,4 @@
-.App {
+.Home {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,11 +8,29 @@
   color: white;
   font-size: 50px;
   font-weight: bold;
+  animation: move 5s infinite;
+}
+
+@keyframes move {
+  0% {
+    background-color: grey;
+  }
+
+  50% {
+    background-color: #FFB302;
+  }
+
+  100% {
+    background-color: grey;
+  }
+
+
+
 }
 
 #logo {
   height: 200px;
-  border-radius: 5px black;
+  box-shadow: 10px 5px 5px black;
   width: 200px;
 }
 
@@ -38,4 +56,40 @@
 .firstpage-bottom-button:hover {
   color: white;
   background: black;
+}
+
+.SearchPage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  background-color: #FFA500;
+}
+
+#logo2 {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+}
+
+#form-submission {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#location {
+  border: 2px solid black;
+  height: 30px;
+  width: 25vw;
+}
+
+input[type="string"]::placeholder {
+  font-size: 15px;
+  color: grey;
+}
+
+#submit {
+  color: grey;
+  border: 2px solid black;
 }
