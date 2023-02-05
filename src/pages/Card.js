@@ -1,4 +1,4 @@
-import { navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../Card.css'
 import logo from '../anonymous.png'
 import React, { useState } from 'react'
@@ -8,12 +8,14 @@ let count = 0;
 function Card(props) {
     const [count, setCount] = useState(0)
     console.log(props["data"])
+    const navigate = useNavigate()
 
 
     if (count == props?.data?.length) {
         return (
             <div className="end-website">
-                <h1>Sorry. No matches were found.</h1>
+                <h1>Sorry, no matches were found.</h1>
+                <button className="last-page-button" onClick={() => navigate('/')}>Click here to go back and try another location!</button>
             </div>
         )
     }
