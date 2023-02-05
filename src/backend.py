@@ -18,11 +18,20 @@ def fetch_data():
     results = cursor.fetchall()
     return results
 
+@app.route('/get-location', methods=['POST']) 
+def get_(): # handle the POST request 
+    if request.method == 'POST': 
+        location = request.form.get('location')
+        # ...
+        # 
+        return {
+            "Hello": "World"
+        } 
 
 # Routes!
 @app.route('/', methods=['GET'])
 def index():
-    return jsonify(db_get_all())
+    return jsonify(fetch_data())
 
 
 @app.route("/<id>", methods=['GET'])
