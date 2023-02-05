@@ -3,6 +3,7 @@ import json
 import os
 import psycopg2
 
+
 # Create a Flask server.
 app = Flask(__name__)
 
@@ -14,7 +15,7 @@ cursor = connection.cursor()
 
 
 def fetch_data():
-    cursor.execute("SELECT * FROM Post WHERE location= ")
+    cursor.execute("SELECT * FROM agent WHERE location= ")
     results = cursor.fetchall()
     return results
 
@@ -22,6 +23,7 @@ def fetch_data():
 def get_(): # handle the POST request 
     if request.method == 'POST': 
         location = request.form.get('location')
+
         # ...
         # 
         return {
@@ -34,12 +36,12 @@ def index():
     return jsonify(fetch_data())
 
 
-@app.route("/<id>", methods=['GET'])
+'''@app.route("/<id>", methods=['GET'])
 def get_by_id(id):
     airbnb = db_get_by_id(id)
     if not airbnb:
         return jsonify({"error": "invalid id", "code": 404})
-    return jsonify(airbnb)
+    return jsonify(airbnb)'''
 
 
 # Runs the API and exposes it on https://<repl name>.<replit username>.repl.co
