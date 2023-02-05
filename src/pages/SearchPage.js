@@ -42,7 +42,7 @@ function SearchPage() {
                 <Form.Group className="mb-3" controlId="formLocation">
                     <h1>Hello, fellow client!</h1>
                     <h1>What is your desired location?</h1>
-                    <label id="form-submission"> Location: <input onChange={event => setLocation(event.target.value)} type="string" id="location" value={location} placeholder="City, State" /></label>
+                    <label id="form-submission"> Location: <input onChange={event => setLocation(event.target.value)} type="string" id="location" value={location} placeholder="City, State (If city has more than one word, uses dashes!) " /></label>
                 </Form.Group>
                 <input type="submit" id="submit" placeholder="Submit" name="submit" />
             </Form>

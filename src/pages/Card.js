@@ -11,6 +11,15 @@ function Card(props) {
     console.log(props["data"])
     const navigate = useNavigate()
 
+    if (count == props?.data?.length) {
+        return (
+            <div className="end-website">
+                <h1>Sorry, no matches were found.</h1>
+                <button className="last-page-button" onClick={() => navigate('/')}>Click here to go back and try another location!</button>
+            </div>
+        )
+    }
+
     if (rightButton == true && props?.data?.length != 0) {
         function myName() {
             const a = setTimeout(myAlert);
@@ -21,22 +30,15 @@ function Card(props) {
 
         }
         myName()
-    }
-    if (count == props?.data?.length) {
-        return (
-            <div className="end-website">
-                <h1>Sorry, no matches were found.</h1>
-                <button className="last-page-button" onClick={() => navigate('/')}>Click here to go back and try another location!</button>
-            </div>
-        )
+        setrightButton(false)
     }
 
     return (
         <div className="card">
+            <h1 className="title-card-page">Find Your Match!</h1>
             <div className="card-holder">
-                <h1 className="title-card-page">Find Your Match!</h1>
                 <div className="card_body">
-                    <img className="picture" src={logo} />
+                    <img className="picture" src={props["data"][count][5]} />
                     <h1 className="card_name">{props["data"][count][0]}</h1>
                     <h2 className="card_title">{props["data"][count][1]}</h2>
                     <p className="card_year">{props["data"][count][3]}</p>
