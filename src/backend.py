@@ -23,6 +23,15 @@ def fetch_data():
 def get_(): # handle the POST request 
     if request.method == 'POST': 
         location = request.form.get('location')
+        # ...
+        # 
+        return {
+            "Hello": "World"
+        } 
+@app.route('/get-location', methods=['POST']) 
+def get_(): # handle the POST request 
+    if request.method == 'POST': 
+        location = request.form.get('location')
 
         # ...
         # 
