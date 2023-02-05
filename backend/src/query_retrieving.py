@@ -24,9 +24,9 @@ def main(location, x = False):
         city = city.replace(' ', '_')
         scrapped_info: dict = agent_data_scrapper.main(city, state)
         query_sending.main(scrapped_info)
-        main(location, True)
+        return main(location, True)
 
-    print("Sucessfully retrieved information from the database!")
+    print("Successfully retrieved information from the database!")
 
 
     # THIS is for debugging

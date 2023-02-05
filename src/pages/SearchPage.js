@@ -14,6 +14,8 @@ function SearchPage() {
     const navigate = useNavigate();
     const handleSubmit = event => {
         console.log(location)
+        const location_split = location.split(" ")
+
         event.preventDefault();
         const updateDate = async () => {
             const API_ENDPOINT = "http://localhost:8000/get-location";
@@ -42,7 +44,7 @@ function SearchPage() {
                 <Form.Group className="mb-3" controlId="formLocation">
                     <h1>Hello, fellow client!</h1>
                     <h1>What is your desired location?</h1>
-                    <label id="form-submission"> Location: <input onChange={event => setLocation(event.target.value)} type="string" id="location" value={location} placeholder="City, State" /></label>
+                    <label id="form-submission"> Location: <input onChange={event => setLocation(event.target.value)} type="string" id="location" value={location} placeholder="City, State (If city has more than one word, use dashes!)" /></label>
                 </Form.Group>
                 <input type="submit" id="submit" placeholder="Submit" name="submit" />
             </Form>
