@@ -24,5 +24,6 @@ yarn-error.log*
 
 
 # scraper library to ignore
-/scraper/bin
-/scraper/lib
+/backend/bin
+/backend/lib
+/backedn/include
