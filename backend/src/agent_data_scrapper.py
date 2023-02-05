@@ -25,6 +25,13 @@ def main(city: str, state: str) -> dict:
         agent_phone = agent.find("div", class_="jsx-2987058905 agent-phone hidden-xs hidden-xxs")
         agent_sold = agent.find("span", class_="jsx-2987058905 sale-sold-count")
         agent_experience = agent.find("span", class_="jsx-2987058905 bold-text")
+        agent_img_box = agent.find("div", class_="jsx-2987058905 agent-list-card-img")
+        if agent_img_box != None:
+            image = agent_img_box.find('img')
+        else:
+            image = None
+
+
 
         if __name__ == '__main__':
 
@@ -46,11 +53,15 @@ def main(city: str, state: str) -> dict:
             if agent_name != None:
                 print(agent_name.text)
 
+            if image != None:
+                print(image['src'])
+            
             print('\n')
 
+        
 
-        if agent_name != None and agent_experience != None and agent_agency != None and agent_phone != None and agent_sold != None and agent_experience.text[0] != '$':
-            all_agent_data[agent_name.text] = agent_name.text,agent_agency.text,agent_phone.text,int(agent_sold.text),agent_experience.text,f'{city},{state}'
+        if agent_name != None and agent_experience != None and agent_agency != None and agent_phone != None and agent_sold != None and agent_experience.text[0] != '$' and image != None:
+            all_agent_data[agent_name.text] = agent_name.text,agent_agency.text,agent_phone.text,int(agent_sold.text),agent_experience.text,f'{city},{state}',f'https:{image["src"]}'
     
     print("Scraped data from: 'realtor.com'")
     return all_agent_data
@@ -58,5 +69,5 @@ def main(city: str, state: str) -> dict:
 
 
 if __name__ == '__main__':
-    pass
+    
     main('fremont','CA')

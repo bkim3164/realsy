@@ -11,10 +11,12 @@ def main():
     connection = psycopg2.connect(db_url)
     cursor = connection.cursor()
 
-    cursor.execute('DELETE FROM agents;')
+    cursor.execute('DROP TABLE agents')
     connection.commit()
-
-
+    
+    
+    
+    print("Action Completed!")
 
 if __name__ == '__main__':
-    pass
+    main()
