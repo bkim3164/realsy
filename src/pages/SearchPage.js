@@ -14,6 +14,8 @@ function SearchPage() {
     const navigate = useNavigate();
     const handleSubmit = event => {
         console.log(location)
+        const location_split = location.split(" ")
+
         event.preventDefault();
         const updateDate = async () => {
             const API_ENDPOINT = "http://localhost:8000/get-location";

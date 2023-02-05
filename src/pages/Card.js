@@ -8,7 +8,9 @@ let count = 0;
 function Card(props) {
     const [count, setCount] = useState(0)
     const [rightButton, setrightButton] = useState(false)
+    const [alertcount, setalertcount] = useState(0)
     console.log(props["data"])
+    console.log(props["data"][count][5])
     const navigate = useNavigate()
 
     if (count == props?.data?.length) {
@@ -20,7 +22,16 @@ function Card(props) {
         )
     }
 
+    if (count == props?.data?.length) {
+        return (
+            <div className="end-website">
+                <h1>Sorry, no matches were found.</h1>
+                <button className="last-page-button" onClick={() => navigate('/')}>Click here to go back and try another location!</button>
+            </div>
+        )
+    }
     if (rightButton == true && props?.data?.length != 0) {
+        setalertcount(alertcount + 1)
         function myName() {
             const a = setTimeout(myAlert);
         }
@@ -32,7 +43,6 @@ function Card(props) {
         myName()
         setrightButton(false)
     }
-
     return (
         <div className="card">
             <h1 className="title-card-page">Find Your Match!</h1>
@@ -44,7 +54,7 @@ function Card(props) {
                     <p className="card_year">{props["data"][count][3]}</p>
                 </div>
                 <div className="card-bottom-container">
-                    <button onClick={() => setCount(count + 1)} className="left-button">Nah!</button>
+                    <button onClick={() => setCount(count + 1) && setalertcount(alertcount + 1)} className="left-button">Nah!</button>
                     <button onClick={() => setrightButton(true)} className="right-button">Yeah!</button>
                 </div>
             </div>

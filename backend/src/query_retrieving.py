@@ -30,7 +30,7 @@ def main(location, x = False):
         return None
         
 
-    print("Sucessfully retrieved information from the database!")
+    print("Successfully retrieved information from the database!")
 
 
     # THIS is for debugging
