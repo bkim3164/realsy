@@ -1,3 +1,8 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+
 .Home {
   display: flex;
   flex-direction: column;
@@ -65,6 +70,10 @@
   align-items: center;
   text-align: center;
   background-color: #FFA500;
+}
+
+#root {
+  height: 100%;
 }
 
 #logo2 {
