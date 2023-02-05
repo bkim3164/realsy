@@ -2,31 +2,39 @@ import { React, useState } from 'react'
 import '../App.css'
 import Form from 'react-bootstrap/Form';
 import logo from '../realsy_logo.png'
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Card from './Card.js'
 
 
 
 function SearchPage() {
     const [location, setLocation] = useState('');
+    const [result, setResult] = useState('');
     const navigate = useNavigate();
-
     const handleSubmit = event => {
         console.log(location)
         event.preventDefault();
         const updateDate = async () => {
             const API_ENDPOINT = "http://localhost:8000/get-location";
             const res = await axios.post(API_ENDPOINT, { location: location });
-            console.log(res.data)
-            setLocation('')
+            //console.log(res.data)
+            setResult(res.data)
 
 
         }
         updateDate()
 
-        
+
 
     };
+    if (result) {
+        return (
+            <div className="CardPage">
+                <Card {...result} />
+            </div>
+        );
+    }
     return (
         <div className="SearchPage">
             <img id="logo2" src={logo} alt="Realsy logo"></img>

@@ -2,41 +2,32 @@
 
 /*   color variables */
 /*   border radius */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 body {
     font-family: Oxygen, sans-serif;
     margin: 2rem;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 28rem));
-    gap: 2rem;
-    justify-content: center;
-}
 
 .card {
-    overflow: auto;
-    box-shadow: 0 2px 20px #e1e5ee;
+    height: 90vh;
     border-radius: 0.2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    transition: transform 200ms ease-in;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #EF5b5b;
+    border: 2px solid black;
+}
+
+.card_body {
+    margin-top: 20px;
 }
 
 .card__image {
     height: 12rem;
     width: 100%;
-    object-fit: cover;
     display: flex;
 }
 
@@ -48,6 +39,14 @@ body {
     padding: 0 1rem;
 }
 
+.card__group {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
 .card__btn {
     padding: 1rem;
     font-family: inherit;
@@ -58,14 +57,49 @@ body {
     background: transparent;
     color: #d50000;
     border-radius: 0.2rem;
-    transition: background 200ms ease-in, color 200ms ease-in;
 }
 
-.card:hover {
-    transform: scale(1.02);
+.picture {
+    height: 200px;
+    border: 2px solid black;
 }
 
-.card:hover .card__btn {
-    background: #d50000;
+.card-bottom-container {
+    width: 25vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card-holder {
+    border: 5px solid black;
+}
+
+.left-button {
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: red;
+    height: 40px;
+    width: 60px;
+
+}
+
+.left-button:hover {
+    background-color: crimson;
     color: white;
+    font-weight: bold;
+}
+
+.right-button {
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: green;
+    height: 40px;
+    width: 60px;
+}
+
+.right-button:hover {
+    background-color: darkgreen;
+    color: white;
+    font-weight: bold;
 }

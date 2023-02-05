@@ -18,10 +18,6 @@ connection = psycopg2.connect(db_url)
 cursor = connection.cursor()
 
 
-def fetch_data():
-    cursor.execute("SELECT * FROM agent WHERE location= ")
-    results = cursor.fetchall()
-    return results
 
 @app.route('/get-location', methods=['POST']) 
 def get_(): # handle the POST request 
@@ -31,13 +27,9 @@ def get_(): # handle the POST request
         print(location)
         data = query_retrieving.main(str(location))
         return {
-            data
+            "data":data
         } 
 
-# Routes!
-@app.route('/', methods=['GET'])
-def index():
-    return jsonify(fetch_data())
 
 
 
