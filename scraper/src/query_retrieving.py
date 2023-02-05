@@ -12,7 +12,7 @@ def main(location, x = False):
     cursor = connection.cursor()
 
     #execute retrieval from database
-    cursor.execute("SELECT name,firm,number,experience,sold FROM agents WHERE location = %s;",(i_location,))
+    cursor.execute("SELECT name,firm,number,experience,sold FROM agents WHERE location = %s;",(location,))
     results = cursor.fetchall()
 
 
@@ -36,7 +36,7 @@ def main(location, x = False):
 
 
 if __name__ == '__main__':
-    i_location = 'davis,CA'
+    i_location = 'irvine,CA'
     main(i_location)
 
 
