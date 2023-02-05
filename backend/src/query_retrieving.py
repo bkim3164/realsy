@@ -38,9 +38,6 @@ def main(location, x = False):
 
 
 if __name__ == '__main__':
-    i_location = 'davis,CA'
+    i_location = 'irvine,CA'
     main(i_location)
-
-
-
 

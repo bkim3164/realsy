@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-from collections import namedtuple
 
 #setup
 def main(city: str, state: str) -> dict:
@@ -50,7 +49,7 @@ def main(city: str, state: str) -> dict:
             print('\n')
 
 
-        if agent_name != None and agent_experience != None and agent_agency != None and agent_phone != None and agent_sold != None:
+        if agent_name != None and agent_experience != None and agent_agency != None and agent_phone != None and agent_sold != None and agent_experience.text[0] != '$':
             all_agent_data[agent_name.text] = agent_name.text,agent_agency.text,agent_phone.text,int(agent_sold.text),agent_experience.text,f'{city},{state}'
     
     print("Scraped data from: 'realtor.com'")
@@ -60,3 +59,4 @@ def main(city: str, state: str) -> dict:
 
 if __name__ == '__main__':
     pass
+    main('fremont','CA')

@@ -51,6 +51,11 @@ body {
     width: 100%;
 }
 
+.card_year {
+    font-size: 20px;
+    font-weight: bold;
+
+}
 
 .card__btn {
     font-family: inherit;
