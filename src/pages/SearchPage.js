@@ -16,7 +16,7 @@ function SearchPage() {
         event.preventDefault();
         const updateDate = async () => {
             const API_ENDPOINT = "http://localhost:8000/get-location";
-            const res = await axios.post(API_ENDPOINT, { params: location });
+            const res = await axios.post(API_ENDPOINT, { location: location });
             console.log(res.data)
             setLocation('')
 

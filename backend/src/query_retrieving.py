@@ -5,6 +5,8 @@ import query_sending
 db_url = 'postgresql://Realsy:JmUsz3HAW98i65TP389vPA@forest-grizzly-4869.6wr.cockroachlabs.cloud:26257/forest-grizzly-4869.defaultdb?sslmode=verify-full'
 
 def main(location, x = False):
+    print(f'Given Location type:{ type(location)}')
+    print(f"given Location: {location}")
     #this will be the input in the future
 
     #create the connection
@@ -12,7 +14,7 @@ def main(location, x = False):
     cursor = connection.cursor()
 
     #execute retrieval from database
-    cursor.execute("SELECT name,firm,number,experience,sold FROM agents WHERE location = %s;",(i_location,))
+    cursor.execute("SELECT name,firm,number,experience,sold FROM agents WHERE location = %s;",(location,))
     results = cursor.fetchall()
 
 
@@ -29,8 +31,8 @@ def main(location, x = False):
 
     # THIS is for debugging
 
-    for result in results:
-        print(result)
+    #for result in results:
+    #    print(result)
 
     return results
 

@@ -3,6 +3,7 @@ import json
 import os
 import psycopg2
 from flask_cors import CORS, cross_origin
+import query_retrieving
 
 
 # Create a Flask server.
@@ -25,12 +26,12 @@ def fetch_data():
 @app.route('/get-location', methods=['POST']) 
 def get_(): # handle the POST request 
     if request.method == 'POST': 
-        location = request.form.get('location')
-
-        # ...
-        # 
+        print(request.get_json())
+        location = request.get_json()['location']
+        print(location)
+        data = query_retrieving.main(str(location))
         return {
-            "Hello": "World"
+            data
         } 
 
 # Routes!
