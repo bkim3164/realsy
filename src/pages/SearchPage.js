@@ -2,18 +2,29 @@ import { React, useState } from 'react'
 import '../App.css'
 import Form from 'react-bootstrap/Form';
 import logo from '../realsy_logo.png'
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 
 
 function SearchPage() {
     const [location, setLocation] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = event => {
         console.log(location)
         event.preventDefault();
+        const updateDate = async () => {
+            const API_ENDPOINT = "http://localhost:8000/get-location";
+            const res = await axios.post(API_ENDPOINT, { params: location });
+            console.log(res.data)
+            setLocation('')
 
 
-        setLocation('')
+        }
+        updateDate()
+
+        
 
     };
     return (

@@ -1,6 +1,7 @@
 import './App.css';
 import Home from './pages/Home.js'
 import SearchPage from './pages/SearchPage.js'
+import Card from './pages/Card.js'
 import { BrowserRouter, Routes, Route, Outlet, Link } from "react-router-dom";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/card" element={<Card />} />
 
           {/* Using path="*"" means "match anything", so this route
                   acts like a catch-all for URLs that we don't have explicit
