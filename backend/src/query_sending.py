@@ -1,7 +1,11 @@
 import psycopg2
 import agent_data_scrapper
 
-db_url = 'postgresql://Realsy:JmUsz3HAW98i65TP389vPA@forest-grizzly-4869.6wr.cockroachlabs.cloud:26257/forest-grizzly-4869.defaultdb?sslmode=verify-full'
+from dotenv import load_dotenv
+load_dotenv()
+
+import os
+db_url = os.environ.get("db_url")
 
 #agents_data = agent_data_scrapper.main('irvine','CA')
 

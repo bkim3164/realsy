@@ -1,8 +1,11 @@
 import psycopg2
 from psycopg2 import Error
 
-db_url = 'postgresql://brian:rtsNRr0uzXSWexZupx9wxw@forest-grizzly-4869.6wr.cockroachlabs.cloud:26257/forest-grizzly-4869.defaultdb?sslmode=verify-full'
+from dotenv import load_dotenv
+load_dotenv()
 
+import os
+db_url = os.environ.get("db_url")
 
 def fetch_data():
     try:
